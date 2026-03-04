@@ -1,0 +1,499 @@
+/* Profile Summary Card */
+.profile-summary-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: white;
+    position: relative;
+}
+
+.profile-avatar-large {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 600;
+    border: 3px solid white;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-details h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.profile-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.profile-address {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.edit-profile-btn {
+    background: white;
+    color: #667eea;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.edit-profile-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Quick Actions */
+.quick-actions {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.quick-actions h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.action-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: #f8fafc;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    background: #667eea;
+    color: white;
+}
+
+.action-card.ai {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+}
+
+.action-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+/* Appointments Tabs */
+.appointments-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex: 1;
+}
+
+.tab-btn.active {
+    background: #667eea;
+    border-color: #667eea;
+    color: white;
+}
+
+/* Appointment Cards */
+.appointment-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    gap: 20px;
+}
+
+.appointment-date-badge {
+    width: 60px;
+    height: 60px;
+    background: #667eea;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.appointment-date-badge.past {
+    background: #94a3b8;
+}
+
+.appointment-date-badge .day {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.appointment-date-badge .month {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.appointment-info {
+    flex: 2;
+}
+
+.appointment-info h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.appointment-time {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.symptoms {
+    font-size: 14px;
+    color: #667eea;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-badge.pending { background: #fff3cd; color: #856404; }
+.status-badge.confirmed { background: #d4edda; color: #155724; }
+.status-badge.completed { background: #cce5ff; color: #004085; }
+.status-badge.cancelled { background: #f8d7da; color: #721c24; }
+
+.appointment-actions {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.reschedule-btn, .cancel-btn, .view-details-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.reschedule-btn {
+    background: #667eea;
+    color: white;
+}
+
+.cancel-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.view-details-btn {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+/* Prescriptions Section */
+.prescriptions-section {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.view-all-btn {
+    background: none;
+    border: none;
+    color: #667eea;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.prescriptions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.prescription-card {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 15px;
+    transition: all 0.3s;
+}
+
+.prescription-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.prescription-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.pres-date {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.doctor-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #667eea;
+}
+
+.diagnosis {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.medicines-count {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.prescription-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn, .pdf-btn, .ai-explain-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex: 1;
+}
+
+.view-btn {
+    background: #667eea;
+    color: white;
+}
+
+.pdf-btn {
+    background: #10b981;
+    color: white;
+}
+
+.ai-explain-btn {
+    background: #8b5cf6;
+    color: white;
+}
+
+/* Timeline Preview */
+.timeline-preview {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+.timeline-icon {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+.timeline-title {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.timeline-date {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* AI Assistant Card */
+.ai-assistant-card {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.ai-icon {
+    font-size: 40px;
+}
+
+.ai-content {
+    flex: 1;
+}
+
+.ai-content h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.ai-content p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.ai-chat-btn {
+    background: white;
+    color: #059669;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.ai-chat-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    background: #f8fafc;
+    border-radius: 10px;
+    color: #64748b;
+}
+
+.book-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Loading */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

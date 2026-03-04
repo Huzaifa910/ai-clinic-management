@@ -1,0 +1,463 @@
+/* Appointments Section */
+.appointments-section {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.view-all-btn {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.appointment-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.appointment-time {
+    font-weight: 600;
+    color: #3b82f6;
+    min-width: 80px;
+}
+
+.appointment-info {
+    flex: 1;
+}
+
+.appointment-info h4 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.appointment-info p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.symptoms {
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-badge.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.confirmed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-badge.completed {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.appointment-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.action-btn.view {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.action-btn.confirm {
+    background: #3b82f6;
+    color: white;
+}
+
+.action-btn.complete {
+    background: #10b981;
+    color: white;
+}
+
+/* Recent Patients */
+.recent-patients-section {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.recent-patients-section h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.patients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.patient-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.patient-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.patient-avatar {
+    width: 50px;
+    height: 50px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.patient-info h4 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.patient-info p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.patient-contact {
+    font-size: 12px;
+    color: #3b82f6;
+}
+
+/* Quick Actions */
+.quick-actions {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.quick-actions h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.action-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #f8fafc;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.action-card:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+.action-card:hover .action-icon {
+    color: white;
+}
+
+.action-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #3b82f6;
+}
+
+.action-card.ai {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.action-card.ai .action-icon {
+    color: white;
+}
+
+
+
+/* Recent Prescriptions Section */
+.recent-prescriptions-section {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.view-all-btn {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Prescriptions Mini List */
+.prescriptions-mini-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.prescription-mini-card {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 15px;
+    transition: all 0.3s;
+    border: 1px solid #e2e8f0;
+}
+
+.prescription-mini-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-color: #3b82f6;
+}
+
+.pres-mini-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.pres-mini-header .patient-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.pres-mini-header .pres-date {
+    font-size: 12px;
+    color: #64748b;
+    background: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
+.pres-diagnosis {
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.pres-mini-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.mini-view-btn, .mini-pdf-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex: 1;
+}
+
+.mini-view-btn {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.mini-view-btn:hover {
+    background: #cbd5e1;
+}
+
+.mini-pdf-btn {
+    background: #10b981;
+    color: white;
+}
+
+.mini-pdf-btn:hover {
+    background: #059669;
+}
+
+/* No Prescriptions State */
+.no-prescriptions {
+    text-align: center;
+    padding: 30px;
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+.no-prescriptions p {
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.write-first-btn {
+    padding: 10px 20px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.write-first-btn:hover {
+    background: #2563eb;
+}
+
+/* Updated Quick Actions */
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.action-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #f8fafc;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.action-card.prescription {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    color: white;
+}
+
+.action-card.write-prescription {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+}
+
+.action-card.ai {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+}
+
+.action-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.action-card small {
+    font-size: 11px;
+    opacity: 0.9;
+    margin-top: 4px;
+}
+
+/* Stats Cards Clickable */
+.stat-card {
+    transition: all 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.stat-card.blue:hover { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; }
+.stat-card.green:hover { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; }
+.stat-card.orange:hover { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; }
+.stat-card.purple:hover { background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); color: white; }
+
+.stat-card:hover .stat-number,
+.stat-card:hover .stat-trend,
+.stat-card:hover h3 {
+    color: white;
+}
+
+.stat-card:hover .stat-icon {
+    background: rgba(255,255,255,0.2);
+}
