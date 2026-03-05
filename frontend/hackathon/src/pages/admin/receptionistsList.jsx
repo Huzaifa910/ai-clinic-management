@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import DashboardTemplate from '../../components/dashboard/dashboardTemplate';
 import api from '../../services/api';
 import toast from 'react-hot-toast';
-import './AdminList.css';
+import './adminList.css';
 
 const ReceptionistsList = () => {
     const navigate = useNavigate();

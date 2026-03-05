@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import DashboardTemplate from "../../components/dashboard/dashboardTemplate";
 import api from "../../services/api";
 import toast from "react-hot-toast";
-import "./AdminDashboard.css";
+import "./adminDashboard.css";
 import { Navigate, useNavigate } from "react-router-dom";
 
 const AdminDashboard = () => {
