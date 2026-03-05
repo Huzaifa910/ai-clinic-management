@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LogoutButton from "../common/LogoutButton";
-import "./DashboardTemplate.css";
+import "./dashboardTemplate.css";
 
 const DashboardTemplate = ({ title, role, children }) => {
     const [user, setUser] = useState(null);
