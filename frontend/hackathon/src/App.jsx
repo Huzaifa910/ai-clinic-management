@@ -9,7 +9,6 @@ import ReceptionistsList from "./pages/admin/receptionistsList";
 import DoctorDashboard from "./pages/doctor/doctorDashboard";
 import AppointmentDetail from "./pages/doctor/appointmentDetail";
 import WritePrescription from "./pages/doctor/writePrescription";
-// ✅ Naye imports add karo
 import PrescriptionsList from "./pages/doctor/prescriptionsList";
 import PrescriptionView from "./pages/doctor/prescriptionView";
 import ReceptionistDashboard from "./pages/receptionist/receptionistDashboard";
