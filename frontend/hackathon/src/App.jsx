@@ -1,5 +1,7 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import PrivateRoute from "./routes/privateRoute";
+import AuthRoute from "./routes/authRoute";
 import Login from "./components/auth/login";
 import Register from "./components/auth/register";
 import AdminDashboard from "./pages/admin/adminDashboard";
@@ -13,132 +15,55 @@ import PrescriptionsList from "./pages/doctor/prescriptionsList";
 import PrescriptionView from "./pages/doctor/prescriptionView";
 import ReceptionistDashboard from "./pages/receptionist/receptionistDashboard";
 import PatientDashboard from "./pages/patient/patientDashboard";
+import NotFound from "./pages/notFound/notFound";
 
+// deployed link https://ai-clinic-management.netlify.app/ 
 const App = () => {
-  const ProtectedRoute = ({ children }) => {
-    const token = localStorage.getItem("token"); // ✅ Ye fix karo
-    if (!token) {
-      return <Navigate to="/login" replace />;
-    }
-    return children;
-  };
-
   return (
     <Routes>
+      {/* Auth Routes - Sirf non-logged in users ke liye */}
+      <Route element={<AuthRoute />}>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Route>
+
+      {/* Private Routes - Sirf logged in users ke liye */}
+      <Route element={<PrivateRoute />}>
+        {/* Admin Routes */}
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/patients" element={<PatientsList />} />
+        <Route path="/admin/doctors" element={<DoctorsList />} />
+        <Route path="/admin/receptionists" element={<ReceptionistsList />} />
+
+        {/* Doctor Routes */}
+        <Route path="/doctor/dashboard" element={<DoctorDashboard />} />
+        <Route
+          path="/doctor/appointments/:id"
+          element={<AppointmentDetail />}
+        />
+        <Route
+          path="/doctor/prescription/new"
+          element={<WritePrescription />}
+        />
+        <Route path="/doctor/prescriptions" element={<PrescriptionsList />} />
+        <Route
+          path="/doctor/prescriptions/:id"
+          element={<PrescriptionView />}
+        />
+
+        {/* Receptionist Routes */}
+        <Route
+          path="/receptionist/dashboard"
+          element={<ReceptionistDashboard />}
+        />
+
+        {/* Patient Routes */}
+        <Route path="/patient/dashboard" element={<PatientDashboard />} />
+      </Route>
+
+      {/* Default Routes */}
       <Route path="/" element={<Navigate to="/login" replace />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-
-      {/* Admin Routes */}
-      <Route
-        path="/admin/dashboard"
-        element={
-          <ProtectedRoute>
-            <AdminDashboard />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/admin/patients"
-        element={
-          <ProtectedRoute>
-            <PatientsList />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/admin/doctors"
-        element={
-          <ProtectedRoute>
-            <DoctorsList />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/admin/receptionists"
-        element={
-          <ProtectedRoute>
-            <ReceptionistsList />
-          </ProtectedRoute>
-        }
-      />
-
-      {/* Doctor Routes */}
-      <Route
-        path="/doctor/dashboard"
-        element={
-          <ProtectedRoute>
-            <DoctorDashboard />
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/doctor/appointments"
-        element={
-          <ProtectedRoute>
-            <AppointmentDetail />
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/doctor/prescription/new"
-        element={
-          <ProtectedRoute>
-            <WritePrescription />
-          </ProtectedRoute>
-        }
-      />
-
-      {/* ✅ NAYE PRESCRIPTION ROUTES */}
-      <Route
-        path="/doctor/prescriptions"
-        element={
-          <ProtectedRoute>
-            <PrescriptionsList />
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/doctor/prescriptions/:id"
-        element={
-          <ProtectedRoute>
-            <PrescriptionView />
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/doctor/patients/:id"
-        element={
-          <ProtectedRoute>
-            {/* Ye component abhi banana hai */}
-            <div>Patient History - Coming Soon</div>
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/receptionist/dashboard"
-        element={
-          <ProtectedRoute>
-            <ReceptionistDashboard />
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/patient/dashboard"
-        element={
-          <ProtectedRoute>
-            <PatientDashboard />
-          </ProtectedRoute>
-        }
-      />
-
-      <Route path="*" element={<Navigate to="/login" replace />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
